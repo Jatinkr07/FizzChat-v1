@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useDispatch } from "react-redux";
+import { BaseUrl } from "..";
 import { setAuthUser } from "../redux/userSlice";
-import { BASE_URL } from "../index.js";
 
 const Login = () => {
   const [user, setUser] = useState({
@@ -17,7 +17,7 @@ const Login = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(`${BASE_URL}/api/v1/user/login`, user, {
+      const res = await axios.post(`${BaseUrl}/api/v1/user/login`, user, {
         headers: {
           "Content-Type": "application/json",
         },

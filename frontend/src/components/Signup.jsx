@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { BASE_URL } from "../index.js";
+import { BaseUrl } from "..";
 import { IoMdMale, IoMdFemale } from "react-icons/io";
 
 const Signup = () => {
@@ -24,7 +24,7 @@ const Signup = () => {
       return;
     }
     try {
-      const res = await axios.post(`${BASE_URL}/api/v1/user/register`, user, {
+      const res = await axios.post(`${BaseUrl}/api/v1/user/register`, user, {
         headers: {
           "Content-Type": "application/json",
         },
