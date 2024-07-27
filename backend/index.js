@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 const corsOption = {
-  origin: "https://fizz-chat-v11.vercel.app",
+  origin: "http://localhost:3000",
   credentials: true,
 };
 app.use(cors(corsOption));

@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["https://fizz-chat-v11.vercel.app"],
+    origin: ["http://localhost:3000"],
     methods: ["GET", "POST"],
   },
 });
