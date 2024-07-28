@@ -10,7 +10,7 @@ import { persistStore } from "redux-persist";
 
 let persistor = persistStore(store);
 
-export const BaseUrl = "https://fizzchat-api1.onrender.com";
+export const BaseUrl = "http://localhost:5000";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
